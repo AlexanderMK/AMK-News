@@ -17,12 +17,23 @@
             android:src="@drawable/wallpaper" />
         <TextView
             android:id="@+id/title"
-            android:layou_width="wrap_content"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/thumbnail"
             android:maxLines="3"
             android:padding="8dp"
             android:text="@string/title"
+            android:textColor="#222"
+            android:textStyle="bold"
+            android:textSize="22dp" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail"
+            android:maxLines="3"
+            android:padding="8dp"
+            android:text="@string/time"
             android:textColor="#222"
             android:textStyle="bold"
             android:textSize="22dp" />
