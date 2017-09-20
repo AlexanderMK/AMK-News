@@ -42,6 +42,13 @@ public class HomeNewsAdapter extends RecyclerView.Adapter<HomeNewsAdapter.HomeNe
         holder.cardTitleTextView.setText(newsArticle.getTitle());
         holder.cardTimeTextView.setText(newsArticle.getTime());
         holder.cardContentTextView.setText(newsArticle.getDetails());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NewsDetailsActivity.launch(v.getContext(), position);
+            }
+        });
+
     }
 
     @Override
