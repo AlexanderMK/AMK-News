@@ -18,7 +18,7 @@ public class GetArticlesResponse {
     private String sortBy;
     @SerializedName("articles")
     @Expose
-    private List<Article> articles = null
+    private List<Article> articles = null;
 
     public String getStatus() {
         return status;
