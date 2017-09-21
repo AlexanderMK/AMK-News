@@ -18,7 +18,7 @@ public class NewsAPI {
 
     private static NewsService newsService = null;
 
-    public static NesService getApi() {
+    public static NewsService getApi() {
         if(newsService == null) {
             // initialize NewsService
             Retrofit retrofit = new Retrofit.Builder()
