@@ -9,8 +9,7 @@ public class NewsAPI {
     private static final String APIPATH = "https://newsapi.org/v1/";
 
     public interface NewsService {
-        @GET("articles?apiK" +
-                "y=" + APIKEY)
+        @GET("articles?apiKey=" + APIKEY)
         Call<GetArticlesResponse> getArticles(@Query("source") String source, @Query("sortBy") String sortBy);
     }
 }
