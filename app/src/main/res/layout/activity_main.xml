@@ -7,6 +7,31 @@
     android:layout_height="match_parent"
     tools:context="com.amknews.amknews.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_home"/>
+        <com.mindorks.placeholderview.PlaceHolderView
+            android:id="@+id/galleryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"/>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white">
+        <com.mindorks.placeholderview.PlaceHolderView
+            android:id="@+id/drawerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+    </FrameLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/activity_main_recyclerview"
         android:layout_width="match_parent"
