@@ -13,7 +13,7 @@
         android:orientation="vertical">
         <include
             android:id="@+id/toolbar"
-            layout="@layout/toolbar_home"/>
+            layout="@layout/toolbr_home"/>
         <com.mindorks.placeholderview.PlaceHolderView
             android:id="@+id/galleryView"
             android:layout_width="match_parent"
