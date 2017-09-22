@@ -2,9 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="178dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    android:paddingLeft="30dp">
+    android:paddingLeft="30dp"
+    tools:context="com.amknews.amknews.DrawerHeader">
+
     <ImageView
         android:id="@+id/profileImageView"
         android:layout_width="50dp"

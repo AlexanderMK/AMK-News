@@ -10,6 +10,6 @@
         android:textColor="@color/white"
         android:gravity="left|center"
         android:layout_gravity="center"
-        android:textSize="18sp
+        android:textSize="18sp"
         android:text="@string/home"/>
 </android.support.v7.widget.Toolbar>

@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import com.mindorks.placeholderview.annotations.Click;
 import com.mindorks.placeholderview.annotations.Layout;
-import com.mindorks.placeholderview.annotations.Position;
 import com.mindorks.placeholderview.annotations.Resolve;
 import com.mindorks.placeholderview.annotations.View;
 
@@ -27,9 +26,7 @@ public class DrawerMenuItem {
     public static final int DRAWER_MENU_ITEM_TERMS = 7;
     public static final int DRAWER_MENU_ITEM_LOGOUT = 8;
 
-    @Position
     private int mMenuPosition;
-
     private Context mContext;
     private DrawerCallBack mCallBack;
 
@@ -39,8 +36,9 @@ public class DrawerMenuItem {
     @View(R.id.itemIcon)
     private ImageView itemIcon;
 
-    public DrawerMenuItem(Context context) {
+    public DrawerMenuItem(Context context, int menuPosition) {
         mContext = context;
+        mMenuPosition = menuPosition;
     }
 
     @Resolve
@@ -48,34 +46,34 @@ public class DrawerMenuItem {
         switch (mMenuPosition){
             case DRAWER_MENU_ITEM_PROFILE:
                 itemNameTxt.setText("Profile");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_account_circle_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_account_circle_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_REQUESTS:
                 itemNameTxt.setText("Requests");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_compare_arrows_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_compare_arrows_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_GROUPS:
                 itemNameTxt.setText("Groups");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_group_work_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_group_work_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_MESSAGE:
                 itemNameTxt.setText("Messages");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_email_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_NOTIFICATIONS:
                 itemNameTxt.setText("Notifications");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_notifications_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_notifications_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_SETTINGS:
                 itemNameTxt.setText("Settings");
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_settings_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_settings_black_24dp));
                 break;
             case DRAWER_MENU_ITEM_TERMS:
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_book_black_24dp));
                 itemNameTxt.setText("Terms");
                 break;
             case DRAWER_MENU_ITEM_LOGOUT:
-                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_exit_to_app_black_18dp));
+                itemIcon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_exit_to_app_black_24dp));
                 itemNameTxt.setText("Logout");
                 break;
         }

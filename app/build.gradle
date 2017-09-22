@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.amknews.amknews"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -37,6 +37,7 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.mindorks:placeholderview:0.2.7'
 
+    compile 'com.mindorks:butterknifelite:0.0.3'
+    compile 'com.mindorks:placeholderview:0.7.1'
 }

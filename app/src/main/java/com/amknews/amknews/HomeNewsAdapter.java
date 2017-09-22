@@ -8,21 +8,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amknews.amknews.model.NewsArticle;
+import com.amknews.amknews.model.Article;
+import com.amknews.amknews.utils.DateUtils;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-
-
 /**
  * Created by alex on 9/19/17.
  */
-
 public class HomeNewsAdapter extends RecyclerView.Adapter<HomeNewsAdapter.HomeNewsViewHolder> {
-    private List<NewsArticle> newsArticles;
+    private List<Article> newsArticles;
 
-    public HomeNewsAdapter(List<NewsArticle> newsArticles) {
+    public HomeNewsAdapter(List<Article> newsArticles) {
         this.newsArticles = newsArticles;
     }
 
@@ -35,20 +33,19 @@ public class HomeNewsAdapter extends RecyclerView.Adapter<HomeNewsAdapter.HomeNe
 
     @Override
     public void onBindViewHolder(HomeNewsViewHolder holder, final int position) {
-        NewsArticle newsArticle = newsArticles.get(position);
-        Glide.with(holder.cardImageView.getContext()).load(newsArticle.getImageUrl())
+        Article newsArticle = newsArticles.get(position);
+        Glide.with(holder.cardImageView.getContext()).load(newsArticle.getUrlToImage())
                 .centerCrop()
                 .into(holder.cardImageView);
         holder.cardTitleTextView.setText(newsArticle.getTitle());
-        holder.cardTimeTextView.setText(newsArticle.getTime());
-        holder.cardContentTextView.setText(newsArticle.getDetails());
+        holder.cardTimeTextView.setText(DateUtils.formatNewsApiDate(newsArticle.getPublishedAt()));
+        holder.cardContentTextView.setText(newsArticle.getDescription());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NewsDetailsActivity.launch(v.getContext(), position);
             }
         });
-
     }
 
     @Override
@@ -71,4 +68,3 @@ public class HomeNewsAdapter extends RecyclerView.Adapter<HomeNewsAdapter.HomeNe
         }
     }
 }
-
